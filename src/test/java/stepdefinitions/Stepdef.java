@@ -116,26 +116,23 @@ public class Stepdef extends Behave {
         tap(getPropertyValue("home.eshopButton"));
     }
 
+    @And("^([^\"]*) goes into the details for ([^\"]*)$")
+    public void userGoesIntoTheDetailsForIPhone(String arg1, String arg2) {
+        setDriver(arg1);
+        waitForElement(getPropertyValue("item.SamsungGalaxyS20"));
+        tap(getPropertyValue("item.SamsungGalaxyS20"));
+    }
+
     @And("^([^\"]*) adds the product to basket$")
     public void addsTheProductToBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
+        waitForElement(getPropertyValue("detail.addBasketButton"));
         tap(getPropertyValue("detail.addBasketButton"));
-
-    }
-
-    @And("^([^\"]*) deletes product from basket$")
-    public void deletesProductFromBasket(String arg1) {
-        setDriver(arg1);
-        tap(getPropertyValue("eshop.basketButton"));
-        tap(getPropertyValue("item.deleteIcon"));
-        tap(getPropertyValue("item.deleteConfirmButton"));
     }
 
     @And("^([^\"]*) adds advance payment product to basket$")
     public void addsAdvancePaymentProductToBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
         tap(getPropertyValue("detail.advancePaymentButton"));
         tap(getPropertyValue("detail.addBasketButton"));
     }
@@ -152,6 +149,14 @@ public class Stepdef extends Behave {
         setDriver(arg1);
         tap(getPropertyValue("eshop.basketButton"));
         tap(getPropertyValue("item.vanillaDeleteConfirmIcon"));
+        tap(getPropertyValue("item.deleteConfirmButton"));
+    }
+
+    @And("^([^\"]*) deletes product from basket$")
+    public void deletesProductFromBasket(String arg1) {
+        setDriver(arg1);
+        tap(getPropertyValue("eshop.basketButton"));
+        tap(getPropertyValue("item.deleteIcon"));
         tap(getPropertyValue("item.deleteConfirmButton"));
     }
 
@@ -174,13 +179,6 @@ public class Stepdef extends Behave {
         tap(getPropertyValue("item.streetSelect"));
         type(getPropertyValue("item.apartInput"), "data.apart");
         type(getPropertyValue("item.doorNoInput"), "data.apart");
-    }
-
-
-    @And("^([^\"]*) goes into the details for ([^\"]*)$")
-    public void userGoesIntoTheDetailsForIPhone(String arg1, String arg2) {
-        setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
     }
 }
 

@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 import static utility.devices.ClientModel.Ecem;
 
 
-@CucumberOptions(features = {"classpath:features/Payment.feature"}
+@CucumberOptions(features = {"classpath:features/Basket.feature"}
         , glue = {"stepdefinitions", "utility"}
         , plugin = {"pretty",
         "html:target/cucumber-reports/cucumber-pretty",
