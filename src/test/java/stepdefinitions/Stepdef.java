@@ -4,6 +4,7 @@ import behavior.Behave;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utility.Hooks;
 
@@ -73,10 +74,11 @@ public class Stepdef extends Behave {
         }
     }
 
-    @And("^([^\"]) should see ([^\"]) displayed$")
+
+    @Then("^([^\"]*) should see ([^\"]*) displayed$")
     public void iShouldSeeDisplayed(String arg1, String arg2) {
         setDriver(arg1);
-        //waitForElement(getPropertyValue(arg2));
+        waitForElement(getPropertyValue(arg2));
     }
 
     @And("^([^\"]*) press back$")
@@ -114,8 +116,8 @@ public class Stepdef extends Behave {
         tap(getPropertyValue("home.eshopButton"));
     }
 
-    @And("^([^\"]*) adds product to basket$")
-    public void addsProductToBasket(String arg1) {
+    @And("^([^\"]*) adds the product to basket$")
+    public void addsTheProductToBasket(String arg1) {
         setDriver(arg1);
         tap(getPropertyValue("item.SamsungGalaxyS20"));
         tap(getPropertyValue("detail.addBasketButton"));
@@ -141,7 +143,6 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) adds vanilla product to basket$")
     public void addsVanillaProductToBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
         tap(getPropertyValue("detail.vanillaButton"));
         tap(getPropertyValue("detail.addBasketButton"));
     }
@@ -155,13 +156,13 @@ public class Stepdef extends Behave {
     }
 
     @And("^([^\"]*) goes to order information page$")
-    public void userGoesToOrderInformationPage(String arg1) {
+    public void goesToOrderInformationPage(String arg1) {
         setDriver(arg1);
         tap(getPropertyValue("item.buyButton"));
     }
 
     @And("^([^\"]*) enters order information$")
-    public void userEntersOrderInformation(String arg1) throws Exception {
+    public void entersOrderInformation(String arg1) throws Exception {
         setDriver(arg1);
         tap(getPropertyValue("item.provinceButton"));
         tap(getPropertyValue("item.provinceSelect"));
@@ -173,9 +174,13 @@ public class Stepdef extends Behave {
         tap(getPropertyValue("item.streetSelect"));
         type(getPropertyValue("item.apartInput"), "data.apart");
         type(getPropertyValue("item.doorNoInput"), "data.apart");
+    }
 
 
-
+    @And("^([^\"]*) goes into the details for ([^\"]*)$")
+    public void userGoesIntoTheDetailsForIPhone(String arg1, String arg2) {
+        setDriver(arg1);
+        tap(getPropertyValue("item.SamsungGalaxyS20"));
     }
 }
 

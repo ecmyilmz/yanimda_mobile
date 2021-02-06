@@ -77,15 +77,15 @@ public class Behave {
             waitElement
                     .ignoring(NoSuchElementException.class)
                     .ignoring(ElementNotVisibleException.class)
-                   ; //.until(ExpectedConditions
-                      //      .visibilityOfElementLocated(getBy(id)));
+                   .until(ExpectedConditions
+                     .visibilityOfElementLocated(getBy(id)));
 
             WebDriverWait waitElement2 = new WebDriverWait(driver, ELEMENT_LOAD_TIMEOUT);
             waitElement2
                     .ignoring(NoSuchElementException.class)
                     .ignoring(ElementNotVisibleException.class)
-                  ; // .until(ExpectedConditions
-                     //       .elementToBeClickable(getBy(id)));
+                    .until(ExpectedConditions
+                    .elementToBeClickable(getBy(id)));
         } catch (TimeoutException e) {
             Assert.fail(e.getMessage());
 
