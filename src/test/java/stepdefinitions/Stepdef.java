@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import utility.Hooks;
 
 
@@ -98,13 +99,12 @@ public class Stepdef extends Behave {
         } else {
             System.out.println("User login değil");
             tap(getPropertyValue("VfLoginButton"));
-            sleepms(10000);
             setUserAut2();
-
             if(getHasRememberedAccount()==true){
                 System.out.println(("kayıtlı hesap var sadece click yaptırt"));
             }else{
                 System.out.println("kayıtlı hesap yok user bılgılerını gırın");
+                sleepms(10000);
                 type(getPropertyValue("login.msisdnInput"), "data.msisdn");
                 type(getPropertyValue("login.passwordInput"), "data.password");
                 tap(getPropertyValue("login.sendCodeButton"));
@@ -112,24 +112,23 @@ public class Stepdef extends Behave {
             }
             tap(getPropertyValue("login.loginButton"));
         }
+
         tap(getPropertyValue("home.advantagesButton"));
+        sleepms(5000);
         tap(getPropertyValue("home.eshopButton"));
+
+    }
+
+    @And("^([^\"]*) goes into the details for ([^\"]*)$")
+    public void userGoesIntoTheDetailsForIPhone(String arg1, String arg2) {
+        setDriver(arg1);
+        tap(getPropertyValue("item.SamsungGalaxyS20"));
     }
 
     @And("^([^\"]*) adds the product to basket$")
     public void addsTheProductToBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
         tap(getPropertyValue("detail.addBasketButton"));
-
-    }
-
-    @And("^([^\"]*) deletes product from basket$")
-    public void deletesProductFromBasket(String arg1) {
-        setDriver(arg1);
-        tap(getPropertyValue("eshop.basketButton"));
-        tap(getPropertyValue("item.deleteIcon"));
-        tap(getPropertyValue("item.deleteConfirmButton"));
     }
 
     @And("^([^\"]*) adds advance payment product to basket$")
@@ -145,6 +144,14 @@ public class Stepdef extends Behave {
         setDriver(arg1);
         tap(getPropertyValue("detail.vanillaButton"));
         tap(getPropertyValue("detail.addBasketButton"));
+    }
+
+    @And("^([^\"]*) deletes product from basket$")
+    public void deletesProductFromBasket(String arg1) {
+        setDriver(arg1);
+        tap(getPropertyValue("eshop.basketButton"));
+        tap(getPropertyValue("item.deleteIcon"));
+        tap(getPropertyValue("item.deleteConfirmButton"));
     }
 
     @And("^([^\"]*) deletes vanilla product from basket$")
@@ -164,8 +171,10 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) enters order information$")
     public void entersOrderInformation(String arg1) throws Exception {
         setDriver(arg1);
+        androidScrollToAnElementByText("T.C. Kimlik Numarası");
         tap(getPropertyValue("item.provinceButton"));
         tap(getPropertyValue("item.provinceSelect"));
+        sleepms(5000);
         tap(getPropertyValue("item.countyButton"));
         tap(getPropertyValue("item.countySelect"));
         tap(getPropertyValue("item.neighborhoodButton"));
@@ -177,10 +186,5 @@ public class Stepdef extends Behave {
     }
 
 
-    @And("^([^\"]*) goes into the details for ([^\"]*)$")
-    public void userGoesIntoTheDetailsForIPhone(String arg1, String arg2) {
-        setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
-    }
 }
 
