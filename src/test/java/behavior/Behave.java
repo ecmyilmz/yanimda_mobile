@@ -1,15 +1,21 @@
 package behavior;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.*;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utility.Device;
 import utility.User;
 
+import java.time.Duration;
 import java.util.HashMap;
+import java.util.List;
 
 public class Behave {
     public WebDriver driver;
@@ -17,6 +23,7 @@ public class Behave {
     private final int ELEMENT_LOAD_TIMEOUT = 30;
     public boolean isUserLogin;
     public boolean HasRememberedAccount;
+    protected User user;
 
     public void setDriver(String user) {
         driver = User.getUsers()
@@ -133,6 +140,25 @@ public class Behave {
             setHasRememberedAccount(true);
         }
     }
+
+  /*  private JavascriptExecutor js;
+    private HashMap<String, String> scrollObject = new HashMap<>();
+
+    void iosScrollToAnElement(IOSElement el) {
+        scrollObject.put("direction", "down");
+        scrollObject.put("element", el.getId());
+        js.executeScript("mobile: swipe", scrollObject);
+    }*/
+
+
+    public void androidScrollToAnElementByText(String text) {
+        try {
+            ((AndroidDriver)driver).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))");
+        } catch (Exception e) {
+            throw new NoSuchElementException("No element" + e);
+        }
+    }
+
 
 
 }

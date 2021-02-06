@@ -4,9 +4,7 @@ package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import utility.Device;
 import utility.User;
@@ -16,7 +14,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static utility.devices.ClientModel.Ecem;
+import static utility.devices.ClientModel.suha;
 
 
 @CucumberOptions(features = {"classpath:features/Basket.feature"}
@@ -30,11 +28,11 @@ import static utility.devices.ClientModel.Ecem;
 @Test
 public class RunCucumberTests extends AbstractTestNGCucumberTests {
     static Object[][] userArray = {
-            {"User", Ecem}
+            {"User", suha}
     };
 
 
-    @BeforeClass
+    @BeforeMethod
     public static void setup() {
         System.out.println("tst");
 
@@ -69,7 +67,7 @@ public class RunCucumberTests extends AbstractTestNGCucumberTests {
 
     }
 
-    @AfterClass
+    @AfterMethod
     public static void teardown() {
         User.getUsers().forEach((k, v) -> {
             if (v.getDevice().getDriver() != null)

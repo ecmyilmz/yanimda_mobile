@@ -30,8 +30,8 @@ public class Android extends Device {
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, ANDROID_APP_PACKAGE);
         cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, APP_ACTIVITY);
-        cap.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, true);
-        cap.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD, true);
+        cap.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, false);
+        cap.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD, false);
         cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, NEW_COMMAND_TIMEOUT);
         cap.setCapability(MobileCapabilityType.NO_RESET, true);
