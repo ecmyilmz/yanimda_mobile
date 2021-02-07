@@ -15,7 +15,7 @@ import static stepdefinitions.Stepdef.sleepms;
 
 public abstract class Device implements Runnable {
 
-    protected final String APPIUM_SERVER = "http://0.0.0.0:4723/wd/hub";
+    protected final String APPIUM_SERVER = "http://127.0.0.1:4723/wd/hub";
     protected final int NEW_COMMAND_TIMEOUT = 150000;
     public WebDriver driver;
     protected ClientModel clientModel;

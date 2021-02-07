@@ -1,6 +1,7 @@
 package utility;
 
 
+import io.cucumber.core.api.Scenario;
 import org.aspectj.lang.annotation.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
     //Scenario Level Before Hook
-   /* @BeforeClass
+   @BeforeClass
     public void before() {
 
     }
@@ -45,6 +46,6 @@ public class Hooks {
                 e.printStackTrace();
             }
         }
-    }*/
+    }
 }
 

@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import utility.Hooks;
 
 
@@ -42,13 +43,13 @@ public class Stepdef extends Behave {
     }
 
 
-    @When("^([^\"]) taps on ([^\"]*)$")
+    @When("^([^\"]*) taps on ([^\"]*)$")
     public void TapsOn(String arg1, String arg2) throws Exception {
         setDriver(arg1);
         tap(getPropertyValue(arg2));
     }
 
-    @When("^([^\"]) control amount ([^\"])$")
+    @When("^([^\"]*) control amount ([^\"]*)$")
     public void controlAmount(String arg1, String arg2) throws Exception {
         setDriver(arg1);
         if ((!driver.findElements(getBy(getPropertyValue(arg2))).isEmpty())) {
@@ -56,17 +57,73 @@ public class Stepdef extends Behave {
         }
     }
 
-    @When("^([^\"]) logins as \"([^\"])\" and \"([^\"])\" and \"([^\"]*)\"$")
-    public void userLoginsAsAnd(String arg1, String username, String password, String otp) throws Exception {
+    @Given("^([^\"]*) goes to login page$")
+    public void goesToLoginPage(String arg1) {
         setDriver(arg1);
-        type(getPropertyValue("login.msisdnInput"), username);
+        sleepms(10000);
+        setUserAut();
+
+        if(getIsUserLogin()==true){
+            System.out.println("User login");
+            tap(getPropertyValue("home.myAccountButton"));
+            tap(getPropertyValue("home.logoutButton"));
+            tap(getPropertyValue("home.logoutYesButton"));
+            tap(getPropertyValue("VfLoginButton"));
+        } else {
+            System.out.println("User login değil");
+            tap(getPropertyValue("VfLoginButton"));
+            sleepms(10000);
+            setUserAut2();
+        }
+        setUserAut2();
+        if(getHasRememberedAccount()==true){
+            System.out.println("kayıtlı hesap varsa yenı hesap tabına geç");
+            tap(getPropertyValue("title.newAccount"));
+        }else{
+            System.out.println("kayıtlı hesap yok user bılgılerını gırın");
+        }
+    }
+    @When("^([^\"]*) logins* as \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void loginsAsAndAnd(String arg1, String phoneNumber, String password, String otp) throws Exception {
+        setDriver(arg1);
+
+        type(getPropertyValue("login.msisdnInput"), phoneNumber);
         type(getPropertyValue("login.passwordInput"), password);
         tap(getPropertyValue("login.sendCodeButton"));
-        type(getPropertyValue("login.otpInput"), otp);
+        tap(getPropertyValue("login.otpButton"));
+        typeOtp(getPropertyValue("login.otpInput1"), otp);
+        typeOtp(getPropertyValue("login.otpInput2"), otp);
+        typeOtp(getPropertyValue("login.otpInput3"), otp);
+        typeOtp(getPropertyValue("login.otpInput4"), otp);
         tap(getPropertyValue("login.loginButton"));
+        sleepms(10000);
     }
 
-    @Given("^([^\"]) tutorial control ([^\"])$")
+    @When("^([^\"]*) logs in with the wrong password")
+    public void logsInWithTheWrongPassword(String arg1) throws Exception{
+        setDriver(arg1);
+        type(getPropertyValue("login.msisdnInput"),"5463003098");
+        type(getPropertyValue("login.passwordInput"), "00000000");
+        tap(getPropertyValue("login.sendCodeButton"));
+
+    }
+
+    @When("^([^\"]*) logs in with the wrong OTP")
+    public void logsInWithTheWrongOTP(String arg1) throws Exception {
+        setDriver(arg1);
+        type(getPropertyValue("login.msisdnInput"), "5463003098");
+        type(getPropertyValue("login.passwordInput"), "11111111");
+        tap(getPropertyValue("login.sendCodeButton"));
+        tap(getPropertyValue("login.otpButton"));
+        typeOtp(getPropertyValue("login.otpInput1"), "0");
+        typeOtp(getPropertyValue("login.otpInput2"), "0");
+        typeOtp(getPropertyValue("login.otpInput3"), "0");
+        typeOtp(getPropertyValue("login.otpInput4"),"0");
+        tap(getPropertyValue("login.loginButton"));
+        sleepms(10000);
+    }
+
+    @Given("^([^\"]*) tutorial control ([^\"]*)$")
     public void tutorialControl(String arg1, String arg2) {
         setDriver(arg1);
         if ((!driver.findElements(getBy(getPropertyValue(arg2))).isEmpty())) {
@@ -80,6 +137,13 @@ public class Stepdef extends Behave {
         setDriver(arg1);
         waitForElement(getPropertyValue(arg2));
     }
+
+    @Then("^([^\"]*) should not see ([^\"]*)$")
+    public void iShouldNotSee(String arg1, String arg2) {
+        setDriver(arg1);
+        assertTrue(driver.findElements(getBy(arg2)).isEmpty());
+    }
+
 
     @And("^([^\"]*) press back$")
     public void pressBack(String arg1) {
@@ -119,23 +183,13 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) adds the product to basket$")
     public void addsTheProductToBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
         tap(getPropertyValue("detail.addBasketButton"));
 
-    }
-
-    @And("^([^\"]*) deletes product from basket$")
-    public void deletesProductFromBasket(String arg1) {
-        setDriver(arg1);
-        tap(getPropertyValue("eshop.basketButton"));
-        tap(getPropertyValue("item.deleteIcon"));
-        tap(getPropertyValue("item.deleteConfirmButton"));
     }
 
     @And("^([^\"]*) adds advance payment product to basket$")
     public void addsAdvancePaymentProductToBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
         tap(getPropertyValue("detail.advancePaymentButton"));
         tap(getPropertyValue("detail.addBasketButton"));
     }
@@ -147,12 +201,32 @@ public class Stepdef extends Behave {
         tap(getPropertyValue("detail.addBasketButton"));
     }
 
+    @And("^([^\"]*) deletes product from basket$")
+    public void deletesProductFromBasket(String arg1) {
+        setDriver(arg1);
+        tap(getPropertyValue("eshop.basketButton"));
+        sleepms(5000);
+        int size = driver.findElements(By.id("imgIconDeleteItem")).size();
+        for (int i = 0; i < size; i++){
+            sleepms(5000);
+        tap(getPropertyValue("item.deleteIcon"));
+        tap(getPropertyValue("item.deleteConfirmButton"));
+        sleepms(5000);
+        }
+    }
+
     @And("^([^\"]*) deletes vanilla product from basket$")
     public void deletesVanillaProductFromBasket(String arg1) {
         setDriver(arg1);
         tap(getPropertyValue("eshop.basketButton"));
-        tap(getPropertyValue("item.vanillaDeleteConfirmIcon"));
-        tap(getPropertyValue("item.deleteConfirmButton"));
+        sleepms(5000);
+        int size = driver.findElements(By.id("item.vanillaDeleteConfirmIcon")).size();
+        for (int i = 0; i < size; i++) {
+            sleepms(5000);
+            tap(getPropertyValue("item.vanillaDeleteConfirmIcon"));
+            tap(getPropertyValue("item.deleteConfirmButton"));
+            sleepms(5000);
+        }
     }
 
     @And("^([^\"]*) goes to order information page$")
@@ -166,6 +240,7 @@ public class Stepdef extends Behave {
         setDriver(arg1);
         tap(getPropertyValue("item.provinceButton"));
         tap(getPropertyValue("item.provinceSelect"));
+        sleepms(5000);
         tap(getPropertyValue("item.countyButton"));
         tap(getPropertyValue("item.countySelect"));
         tap(getPropertyValue("item.neighborhoodButton"));
@@ -174,13 +249,20 @@ public class Stepdef extends Behave {
         tap(getPropertyValue("item.streetSelect"));
         type(getPropertyValue("item.apartInput"), "data.apart");
         type(getPropertyValue("item.doorNoInput"), "data.apart");
+        androidScrollToAnElementByText("T.C. Kimlik Numarası");
+        type(getPropertyValue("T.C. Kimlik Numarası"), "data.password");
+        androidScrollToAnElementByText("item.checkBox");
+        tap(getPropertyValue("item.checkBox"));
+        tap(getPropertyValue("item.confirmButton"));
     }
 
 
     @And("^([^\"]*) goes into the details for ([^\"]*)$")
-    public void userGoesIntoTheDetailsForIPhone(String arg1, String arg2) {
+    public void goesIntoTheDetailsForIPhone(String arg1, String arg2) {
         setDriver(arg1);
         tap(getPropertyValue("item.SamsungGalaxyS20"));
     }
+
+
 }
 

@@ -118,6 +118,13 @@ public class Behave {
         el.sendKeys(keys);
     }
 
+    public void typeOtp(String sel, String keys) throws Exception {
+        waitForElement(sel);
+        WebElement el = getElement(sel);
+        tap(sel);
+        el.sendKeys(keys);
+    }
+
     public By getBy(String tag) {
         if (tag.substring(0, 1).equals("("))
             return By.xpath(tag);
