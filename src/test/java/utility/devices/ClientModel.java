@@ -1,9 +1,10 @@
 package utility.devices;
 
 public enum ClientModel {
-    Ecem ("emulator-5554",8301,"9.0", "Android");
+    //Ecem ("emulator-5554",8301,"9.0", "Android");
     //Redmi("1a523a02",8301,"9.0", "Android");
     //suha("4ls88lw8einzfexw",8301,"10", "Android");
+    PIXEL3("89DX08NBE",8301,"11", "Android");
 
     private final String udid;
     private final int port;

@@ -163,10 +163,10 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>MyProjectName</projectName>  <!-- Replace with project name -->
+                            <projectName>Vodafone - Yanimda (eShop) </projectName>  <!-- Replace with project name -->
                             <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
                             <cucumberOutput>target/cucumber-reports/json-reports</cucumberOutput>
-                            <buildNumber>1</buildNumber>
+                            <buildNumber>13.4.2.1611319562510</buildNumber>
                             <parallelTesting>false</parallelTesting>
                         </configuration>
                     </execution>

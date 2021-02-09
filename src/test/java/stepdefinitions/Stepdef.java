@@ -65,10 +65,12 @@ public class Stepdef extends Behave {
 
         if(getIsUserLogin()==true){
             System.out.println("User login");
+            sleepms(10000);
             tap(getPropertyValue("home.myAccountButton"));
             tap(getPropertyValue("home.logoutButton"));
             tap(getPropertyValue("home.logoutYesButton"));
             tap(getPropertyValue("VfLoginButton"));
+            sleepms(10000);
         } else {
             System.out.println("User login değil");
             tap(getPropertyValue("VfLoginButton"));
@@ -78,19 +80,23 @@ public class Stepdef extends Behave {
         setUserAut2();
         if(getHasRememberedAccount()==true){
             System.out.println("kayıtlı hesap varsa yenı hesap tabına geç");
+            sleepms(5000);
             tap(getPropertyValue("title.newAccount"));
+            sleepms(5000);
         }else{
             System.out.println("kayıtlı hesap yok user bılgılerını gırın");
+            sleepms(5000);
         }
     }
     @When("^([^\"]*) logins* as \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
     public void loginsAsAndAnd(String arg1, String phoneNumber, String password, String otp) throws Exception {
         setDriver(arg1);
-
+        sleepms(10000);
         type(getPropertyValue("login.msisdnInput"), phoneNumber);
         type(getPropertyValue("login.passwordInput"), password);
         tap(getPropertyValue("login.sendCodeButton"));
         tap(getPropertyValue("login.otpButton"));
+        sleepms(10000);
         typeOtp(getPropertyValue("login.otpInput1"), otp);
         typeOtp(getPropertyValue("login.otpInput2"), otp);
         typeOtp(getPropertyValue("login.otpInput3"), otp);
@@ -102,19 +108,22 @@ public class Stepdef extends Behave {
     @When("^([^\"]*) logs in with the wrong password")
     public void logsInWithTheWrongPassword(String arg1) throws Exception{
         setDriver(arg1);
+        sleepms(5000);
         type(getPropertyValue("login.msisdnInput"),"5463003098");
         type(getPropertyValue("login.passwordInput"), "00000000");
         tap(getPropertyValue("login.sendCodeButton"));
-
+        sleepms(5000);
     }
 
     @When("^([^\"]*) logs in with the wrong OTP")
     public void logsInWithTheWrongOTP(String arg1) throws Exception {
         setDriver(arg1);
+        sleepms(10000);
         type(getPropertyValue("login.msisdnInput"), "5463003098");
         type(getPropertyValue("login.passwordInput"), "11111111");
         tap(getPropertyValue("login.sendCodeButton"));
         tap(getPropertyValue("login.otpButton"));
+        sleepms(5000);
         typeOtp(getPropertyValue("login.otpInput1"), "0");
         typeOtp(getPropertyValue("login.otpInput2"), "0");
         typeOtp(getPropertyValue("login.otpInput3"), "0");
@@ -126,6 +135,7 @@ public class Stepdef extends Behave {
     @Given("^([^\"]*) tutorial control ([^\"]*)$")
     public void tutorialControl(String arg1, String arg2) {
         setDriver(arg1);
+        sleepms(10000);
         if ((!driver.findElements(getBy(getPropertyValue(arg2))).isEmpty())) {
             tap(getPropertyValue(arg2));
         }
@@ -135,12 +145,14 @@ public class Stepdef extends Behave {
     @Then("^([^\"]*) should see ([^\"]*) displayed$")
     public void iShouldSeeDisplayed(String arg1, String arg2) {
         setDriver(arg1);
+        sleepms(10000);
         waitForElement(getPropertyValue(arg2));
     }
 
     @Then("^([^\"]*) should not see ([^\"]*)$")
     public void iShouldNotSee(String arg1, String arg2) {
         setDriver(arg1);
+        sleepms(10000);
         assertTrue(driver.findElements(getBy(arg2)).isEmpty());
     }
 
@@ -159,6 +171,7 @@ public class Stepdef extends Behave {
 
         if(getIsUserLogin()==true){
             System.out.println("User login");
+            sleepms(10000);
         } else {
             System.out.println("User login değil");
             tap(getPropertyValue("VfLoginButton"));
@@ -166,23 +179,30 @@ public class Stepdef extends Behave {
             setUserAut2();
 
             if(getHasRememberedAccount()==true){
+                sleepms(10000);
                 System.out.println(("kayıtlı hesap var sadece click yaptırt"));
             }else{
+                sleepms(10000);
                 System.out.println("kayıtlı hesap yok user bılgılerını gırın");
                 type(getPropertyValue("login.msisdnInput"), "data.msisdn");
                 type(getPropertyValue("login.passwordInput"), "data.password");
                 tap(getPropertyValue("login.sendCodeButton"));
                 type(getPropertyValue("login.otpInput"), "data.otp");
             }
+            sleepms(10000);
             tap(getPropertyValue("login.loginButton"));
         }
+        sleepms(10000);
         tap(getPropertyValue("home.advantagesButton"));
+        sleepms(10000);
         tap(getPropertyValue("home.eshopButton"));
+        sleepms(10000);
     }
 
     @And("^([^\"]*) adds the product to basket$")
     public void addsTheProductToBasket(String arg1) {
         setDriver(arg1);
+        sleepms(10000);
         tap(getPropertyValue("detail.addBasketButton"));
 
     }
@@ -190,20 +210,25 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) adds advance payment product to basket$")
     public void addsAdvancePaymentProductToBasket(String arg1) {
         setDriver(arg1);
+        sleepms(10000);
         tap(getPropertyValue("detail.advancePaymentButton"));
+        sleepms(10000);
         tap(getPropertyValue("detail.addBasketButton"));
     }
 
     @And("^([^\"]*) adds vanilla product to basket$")
     public void addsVanillaProductToBasket(String arg1) {
         setDriver(arg1);
+        sleepms(10000);
         tap(getPropertyValue("detail.vanillaButton"));
+        sleepms(10000);
         tap(getPropertyValue("detail.addBasketButton"));
     }
 
     @And("^([^\"]*) deletes product from basket$")
     public void deletesProductFromBasket(String arg1) {
         setDriver(arg1);
+        sleepms(10000);
         tap(getPropertyValue("eshop.basketButton"));
         sleepms(5000);
         int size = driver.findElements(By.id("imgIconDeleteItem")).size();
@@ -260,7 +285,9 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) goes into the details for ([^\"]*)$")
     public void goesIntoTheDetailsForIPhone(String arg1, String arg2) {
         setDriver(arg1);
+        sleepms(10000);
         tap(getPropertyValue("item.SamsungGalaxyS20"));
+        sleepms(10000);
     }
 
 

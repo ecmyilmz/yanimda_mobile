@@ -1,7 +1,5 @@
 @regression
 Feature: Login & Logout Scenarios
-  User should be able to login with correct credentials
-  User should be warned if enters incorrect credentals.
 
   Scenario: 1 Verify that the user can log in with the correct information
     Given User goes to login page
@@ -13,9 +11,9 @@ Feature: Login & Logout Scenarios
     When User logs in with the wrong password
     And User should see errorText displayed
 
-  Scenario: 3 Verify that the user receives a warning when entering with incorrect OTP
-    Given User goes to login page
-    When User logs in with the wrong OTP
+#  Scenario: 3 Verify that the user receives a warning when entering with incorrect OTP
+#    Given User goes to login page
+#    When User logs in with the wrong OTP
 
 
 

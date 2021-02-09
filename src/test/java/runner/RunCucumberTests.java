@@ -14,11 +14,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static utility.devices.ClientModel.Ecem;
+import static utility.devices.ClientModel.*;
 
 
 @CucumberOptions(features = {"classpath:features"}
-        , tags = {"@deneme"}
+        , tags = {"@regression"}
         , glue = {"stepdefinitions", "utility"}
         , plugin = {"pretty",
         "html:target/cucumber-reports/cucumber-pretty",
@@ -29,7 +29,7 @@ import static utility.devices.ClientModel.Ecem;
 @Test
 public class RunCucumberTests extends AbstractTestNGCucumberTests {
     static Object[][] userArray = {
-            {"User", Ecem}
+            {"User", PIXEL3}
     };
 
 
