@@ -4,6 +4,7 @@ package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+
 import org.testng.annotations.*;
 
 import utility.Device;
@@ -29,13 +30,14 @@ import static utility.devices.ClientModel.*;
 @Test
 public class RunCucumberTests extends AbstractTestNGCucumberTests {
     static Object[][] userArray = {
-            {"User", PIXEL3}
+            {"User", Ecem}
     };
 
 
     @BeforeMethod
     public static void setup() {
         System.out.println("tst");
+
 
         ExecutorService service = Executors.newFixedThreadPool(5);
 
