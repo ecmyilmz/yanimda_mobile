@@ -1,4 +1,4 @@
-@regression
+
 Feature: Advance Payment Basket Page
 
   Scenario: 1 Verify the advance payment product has been added to the basket

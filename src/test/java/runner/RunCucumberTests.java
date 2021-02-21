@@ -1,21 +1,22 @@
 package runner;
 
 
-
+import core.Device;
+import core.User;
+import core.devices.Android;
+import core.devices.ClientModel;
+import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
-
-import utility.Device;
-import utility.User;
-import utility.devices.Android;
-import utility.devices.ClientModel;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static utility.devices.ClientModel.*;
+
+import static core.devices.ClientModel.Ecem;
+
 
 
 @CucumberOptions(features = {"classpath:features"}
@@ -34,11 +35,11 @@ public class RunCucumberTests extends AbstractTestNGCucumberTests {
     };
 
 
+    private static AndroidDriver<WebElement> driver;
+
     @BeforeMethod
     public static void setup() {
         System.out.println("tst");
-
-
         ExecutorService service = Executors.newFixedThreadPool(5);
 
         for (Object[] s : userArray) {
@@ -72,9 +73,9 @@ public class RunCucumberTests extends AbstractTestNGCucumberTests {
 
     @AfterMethod
     public static void teardown() {
-        User.getUsers().forEach((k, v) -> {
-            if (v.getDevice().getDriver() != null)
-                v.getDevice().getDriver().quit();
-        });
+        if (driver != null) {
+            driver.quit();
+        }
+
     }
 }

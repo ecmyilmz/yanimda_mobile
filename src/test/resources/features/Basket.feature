@@ -1,4 +1,4 @@
-@regression
+
 Feature: Basket Page
 
   Scenario: 1 Verify the product has been added to the basket
