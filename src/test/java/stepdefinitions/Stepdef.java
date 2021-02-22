@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import behavior.Behave;
 
+import io.cucumber.java.an.E;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -174,7 +175,7 @@ public class Stepdef extends Behave {
             sleepms(10000);
         } else {
             System.out.println("User login değil");
-            tap(getPropertyValue("VfLoginButton"));
+            tap(getPropertyValue("login.VfLoginButton"));
             sleepms(10000);
             setUserAut2();
 
@@ -199,11 +200,19 @@ public class Stepdef extends Behave {
         sleepms(10000);
     }
 
+    @And("^([^\"]*) goes into the details for ([^\"]*)$")
+    public void goesIntoTheDetailsForIPhone(String arg1, String arg2) {
+        setDriver(arg1);
+        sleepms(10000);
+        tap(getPropertyValue("eShopHome.SamsungGalaxyS20"));
+        sleepms(10000);
+    }
+
     @And("^([^\"]*) adds the product to basket$")
     public void addsTheProductToBasket(String arg1) {
         setDriver(arg1);
         sleepms(10000);
-        tap(getPropertyValue("detail.addBasketButton"));
+        tap(getPropertyValue("eShopProductDetail.addBasketButton"));
 
     }
 
@@ -211,31 +220,31 @@ public class Stepdef extends Behave {
     public void addsAdvancePaymentProductToBasket(String arg1) {
         setDriver(arg1);
         sleepms(10000);
-        tap(getPropertyValue("detail.advancePaymentButton"));
+        tap(getPropertyValue("eShopProductDetail.advancePaymentButton"));
         sleepms(10000);
-        tap(getPropertyValue("detail.addBasketButton"));
+        tap(getPropertyValue("eShopProductDetail.addBasketButton"));
     }
 
     @And("^([^\"]*) adds vanilla product to basket$")
     public void addsVanillaProductToBasket(String arg1) {
         setDriver(arg1);
         sleepms(10000);
-        tap(getPropertyValue("detail.vanillaButton"));
+        tap(getPropertyValue("eShopProductDetail.vanillaButton"));
         sleepms(10000);
-        tap(getPropertyValue("detail.addBasketButton"));
+        tap(getPropertyValue("eShopProductDetail.addBasketButton"));
     }
 
     @And("^([^\"]*) deletes product from basket$")
     public void deletesProductFromBasket(String arg1) {
         setDriver(arg1);
         sleepms(10000);
-        tap(getPropertyValue("eshop.basketButton"));
+        tap(getPropertyValue("eshopHome.basketButton"));
         sleepms(5000);
         int size = driver.findElements(By.id("imgIconDeleteItem")).size();
         for (int i = 0; i < size; i++){
             sleepms(5000);
-        tap(getPropertyValue("item.deleteIcon"));
-        tap(getPropertyValue("item.deleteConfirmButton"));
+        tap(getPropertyValue("eShopBasket.deleteIcon"));
+        tap(getPropertyValue("eShopBasket.deleteConfirmButton"));
         sleepms(5000);
         }
     }
@@ -243,13 +252,13 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) deletes vanilla product from basket$")
     public void deletesVanillaProductFromBasket(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("eshop.basketButton"));
+        tap(getPropertyValue("eshopHome.basketButton"));
         sleepms(5000);
-        int size = driver.findElements(By.id("item.vanillaDeleteConfirmIcon")).size();
+        int size = driver.findElements(By.id("eShopBasket.vanillaDeleteConfirmIcon")).size();
         for (int i = 0; i < size; i++) {
             sleepms(5000);
-            tap(getPropertyValue("item.vanillaDeleteConfirmIcon"));
-            tap(getPropertyValue("item.deleteConfirmButton"));
+            tap(getPropertyValue("eShopBasket.vanillaDeleteConfirmIcon"));
+            tap(getPropertyValue("eShopBasket.deleteConfirmButton"));
             sleepms(5000);
         }
     }
@@ -257,39 +266,36 @@ public class Stepdef extends Behave {
     @And("^([^\"]*) goes to order information page$")
     public void goesToOrderInformationPage(String arg1) {
         setDriver(arg1);
-        tap(getPropertyValue("item.buyButton"));
+        tap(getPropertyValue("eShopBasket.buyButton"));
     }
 
     @And("^([^\"]*) enters order information$")
     public void entersOrderInformation(String arg1) throws Exception {
         setDriver(arg1);
-        tap(getPropertyValue("item.provinceButton"));
-        tap(getPropertyValue("item.provinceSelect"));
+        tap(getPropertyValue("eShopAddress.provinceButton"));
+        tap(getPropertyValue("eShopAddress.provinceSelect"));
         sleepms(5000);
-        tap(getPropertyValue("item.countyButton"));
-        tap(getPropertyValue("item.countySelect"));
-        tap(getPropertyValue("item.neighborhoodButton"));
-        tap(getPropertyValue("item.neighborhoodSelect"));
-        tap(getPropertyValue("item.streetButton"));
-        tap(getPropertyValue("item.streetSelect"));
-        type(getPropertyValue("item.apartInput"), "data.apart");
-        type(getPropertyValue("item.doorNoInput"), "data.apart");
+        tap(getPropertyValue("eShopAddress.countyButton"));
+        tap(getPropertyValue("eShopAddress.countySelect"));
+        tap(getPropertyValue("eShopAddress.neighborhoodButton"));
+        tap(getPropertyValue("eShopAddress.neighborhoodSelect"));
+        tap(getPropertyValue("eShopAddress.streetButton"));
+        tap(getPropertyValue("eShopAddress.streetSelect"));
+        type(getPropertyValue("eShopAddress.apartInput"), "Test Siparisidir");
+        type(getPropertyValue("eShopAddress.doorNoInput"), "Test Siparisidir");
         androidScrollToAnElementByText("T.C. Kimlik Numarası");
-        type(getPropertyValue("T.C. Kimlik Numarası"), "data.password");
-        androidScrollToAnElementByText("item.checkBox");
-        tap(getPropertyValue("item.checkBox"));
-        tap(getPropertyValue("item.confirmButton"));
+        type(getPropertyValue("eShopAddress.TcknInput"), "62852154126");
+        androidScrollToAnElementByText("Siparişi tamamla");
+        tap(getPropertyValue("eShopAddress.checkBox"));
+        tap(getPropertyValue("eShopAddress.confirmButton"));
     }
 
 
-    @And("^([^\"]*) goes into the details for ([^\"]*)$")
-    public void goesIntoTheDetailsForIPhone(String arg1, String arg2) {
+    @And("^([^\"]*) enters the correct OTP and clicks continue button$")
+    public void entersTheCorrectOTPAndClicksContinueButton(String arg1) throws Exception{
         setDriver(arg1);
-        sleepms(10000);
-        tap(getPropertyValue("item.SamsungGalaxyS20"));
-        sleepms(10000);
+        type(getPropertyValue("eShopSecurityCode.input"), "111111");
     }
-
 
 }
 

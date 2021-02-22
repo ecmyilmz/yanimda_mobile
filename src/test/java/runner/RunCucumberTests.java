@@ -17,8 +17,8 @@ import java.util.concurrent.TimeUnit;
 import static utility.devices.ClientModel.*;
 
 
-@CucumberOptions(features = {"classpath:features"}
-        , tags = {"@regression"}
+@CucumberOptions(features = {"classpath:features/Address.feature"}
+        //, tags = {"@regression"}
         , glue = {"stepdefinitions", "utility"}
         , plugin = {"pretty",
         "html:target/cucumber-reports/cucumber-pretty",
@@ -29,7 +29,7 @@ import static utility.devices.ClientModel.*;
 @Test
 public class RunCucumberTests extends AbstractTestNGCucumberTests {
     static Object[][] userArray = {
-            {"User", PIXEL3}
+            {"User", Ecem}
     };
 
 
