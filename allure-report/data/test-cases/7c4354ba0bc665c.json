@@ -1,0 +1,138 @@
+{
+  "uid" : "7c4354ba0bc665c",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "c92220cca28440d21eaca23e8a24473f",
+  "time" : {
+    "start" : 1615746990107,
+    "stop" : 1615747110251,
+    "duration" : 120144
+  },
+  "status" : "failed",
+  "statusMessage" : "Error in selectors.properties or Gherkin file ;BasketPage could not be found in selectors.properties!",
+  "statusTrace" : "junit.framework.AssertionFailedError: Error in selectors.properties or Gherkin file ;BasketPage could not be found in selectors.properties!\n\tat junit.framework.Assert.fail(Assert.java:57)\n\tat junit.framework.TestCase.fail(TestCase.java:227)\n\tat stepdefinitions.Stepdef.getPropertyValue(Stepdef.java:42)\n\tat stepdefinitions.Stepdef.iShouldSeeDisplayed(Stepdef.java:150)\n\tat ✽.User should see BasketPage displayed(classpath:features/Basket.feature:20)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1615746970557,
+      "stop" : 1615746989922,
+      "duration" : 19365
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1615746218257,
+      "stop" : 1615746218428,
+      "duration" : 171
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1615747110253,
+      "stop" : 1615747110976,
+      "duration" : 723
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1615747520248,
+      "stop" : 1615747520440,
+      "duration" : 192
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "eshop.yanimda"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "host",
+    "value" : "Ecems-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "6556@Ecems-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"3 Verify the advance payment product has been added to the basket\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Basket\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7c4354ba0bc665c.json",
+  "parameterValues" : [ "\"3 Verify the advance payment product has been added to the basket\"", "\"Basket\"" ]
+}

@@ -1,0 +1,138 @@
+{
+  "uid" : "abf427766f4586b6",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "df1841f5c7a468b313e1cb78f67aa90f",
+  "time" : {
+    "start" : 1615747364709,
+    "stop" : 1615747519545,
+    "duration" : 154836
+  },
+  "status" : "failed",
+  "statusMessage" : "Expected condition failed: waiting for visibility of element located by By.xpath: (//*[@resource-id=\"com.vodafone.selfservis.beta:id/rowiconIV\"])[2] (tried for 30 second(s) with 500 milliseconds interval)",
+  "statusTrace" : "java.lang.AssertionError: Expected condition failed: waiting for visibility of element located by By.xpath: (//*[@resource-id=\"com.vodafone.selfservis.beta:id/rowiconIV\"])[2] (tried for 30 second(s) with 500 milliseconds interval)\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat behavior.Behave.waitForElement(Behave.java:97)\n\tat behavior.Behave.getElement(Behave.java:60)\n\tat behavior.Behave.tap(Behave.java:68)\n\tat stepdefinitions.Stepdef.entersOrderInformation(Stepdef.java:278)\n\tat ✽.User enters order information(classpath:features/Payment.feature:8)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1615746218257,
+      "stop" : 1615746218428,
+      "duration" : 171
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1615747345660,
+      "stop" : 1615747364706,
+      "duration" : 19046
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1615747519546,
+      "stop" : 1615747520245,
+      "duration" : 699
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1615747520248,
+      "stop" : 1615747520440,
+      "duration" : 192
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "eshop.yanimda"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "host",
+    "value" : "Ecems-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "6556@Ecems-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"1 Verify the product has been bought properly\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Payment\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "abf427766f4586b6.json",
+  "parameterValues" : [ "\"1 Verify the product has been bought properly\"", "\"Payment\"" ]
+}

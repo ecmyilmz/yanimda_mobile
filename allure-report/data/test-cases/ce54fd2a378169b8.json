@@ -1,0 +1,140 @@
+{
+  "uid" : "ce54fd2a378169b8",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "dc0e9bdeb21e2e662efbc6a6cf80836a",
+  "time" : {
+    "start" : 1615746625546,
+    "stop" : 1615746721166,
+    "duration" : 95620
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1615746218257,
+      "stop" : 1615746218428,
+      "duration" : 171
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1615746605471,
+      "stop" : 1615746625349,
+      "duration" : 19878
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1615746721167,
+      "stop" : 1615746722360,
+      "duration" : 1193
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1615747520248,
+      "stop" : 1615747520440,
+      "duration" : 192
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "eshop.yanimda"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "host",
+    "value" : "Ecems-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "6556@Ecems-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"2 Verify the product has been deleted to the basket\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Address\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "193a8483156c3b3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615746381122,
+        "stop" : 1615746477347,
+        "duration" : 96225
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ce54fd2a378169b8.json",
+  "parameterValues" : [ "\"2 Verify the product has been deleted to the basket\"", "\"Address\"" ]
+}

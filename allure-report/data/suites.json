@@ -1,0 +1,134 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Default Suite",
+    "children" : [ {
+      "name" : "eshop.yanimda",
+      "children" : [ {
+        "name" : "runner.RunCucumberTests",
+        "children" : [ {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "61eb2541517b7fe6",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1615746498329,
+            "stop" : 1615746604878,
+            "duration" : 106549
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"1 Verify that the product goes to the order information page properly\"", "\"Address\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "ce54fd2a378169b8",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1615746625546,
+            "stop" : 1615746721166,
+            "duration" : 95620
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"2 Verify the product has been deleted to the basket\"", "\"Address\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "68dacac7771c7db",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "failed",
+          "time" : {
+            "start" : 1615746741631,
+            "stop" : 1615746852514,
+            "duration" : 110883
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"1 Verify the product has been added to the basket\"", "\"Basket\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "d312dbfde882c3a1",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1615746874885,
+            "stop" : 1615746969905,
+            "duration" : 95020
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"2 Verify the product has been deleted to the basket\"", "\"Basket\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "7c4354ba0bc665c",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "failed",
+          "time" : {
+            "start" : 1615746990107,
+            "stop" : 1615747110251,
+            "duration" : 120144
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"3 Verify the advance payment product has been added to the basket\"", "\"Basket\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "49384f96171f9e19",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1615747130569,
+            "stop" : 1615747228086,
+            "duration" : 97517
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"4 Verify the advance payment product has been deleted to the basket\"", "\"Basket\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "6cf89e409bfe682b",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "failed",
+          "time" : {
+            "start" : 1615747249440,
+            "stop" : 1615747299594,
+            "duration" : 50154
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"1 Verify that the user can log in with the correct information\"", "\"Login & Logout\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "8255cb2e371b45a",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "failed",
+          "time" : {
+            "start" : 1615747319637,
+            "stop" : 1615747345086,
+            "duration" : 25449
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"2 Verify that the user receives an error warning when logging in with incorrect information\"", "\"Login & Logout\"" ]
+        }, {
+          "name" : "Runs Cucumber Scenarios",
+          "uid" : "abf427766f4586b6",
+          "parentUid" : "515142efd844592a801f3c625a140b3a",
+          "status" : "failed",
+          "time" : {
+            "start" : 1615747364709,
+            "stop" : 1615747519545,
+            "duration" : 154836
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "\"1 Verify the product has been bought properly\"", "\"Payment\"" ]
+        } ],
+        "uid" : "515142efd844592a801f3c625a140b3a"
+      } ],
+      "uid" : "3b1947a9330c5cb13ac25e0029f36ba5"
+    } ],
+    "uid" : "8399274b4bb69ec8699907dd6ef7de4e"
+  } ]
+}

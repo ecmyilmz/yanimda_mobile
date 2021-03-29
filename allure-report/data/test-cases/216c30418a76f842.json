@@ -1,0 +1,132 @@
+{
+  "uid" : "216c30418a76f842",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "d69b5dc6b11945c9f39e2e0b6ca4c005",
+  "time" : {
+    "start" : 1615746239551,
+    "stop" : 1615746360316,
+    "duration" : 120765
+  },
+  "status" : "failed",
+  "statusMessage" : "Expected condition failed: waiting for visibility of element located by By.id: btnBuy (tried for 30 second(s) with 500 milliseconds interval)",
+  "statusTrace" : "java.lang.AssertionError: Expected condition failed: waiting for visibility of element located by By.id: btnBuy (tried for 30 second(s) with 500 milliseconds interval)\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat behavior.Behave.waitForElement(Behave.java:97)\n\tat behavior.Behave.getElement(Behave.java:60)\n\tat behavior.Behave.tap(Behave.java:68)\n\tat stepdefinitions.Stepdef.goesToOrderInformationPage(Stepdef.java:269)\n\tat ✽.User goes to order information page(classpath:features/Address.feature:7)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1615746218257,
+      "stop" : 1615746218428,
+      "duration" : 171
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1615746218479,
+      "stop" : 1615746239130,
+      "duration" : 20651
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1615746360323,
+      "stop" : 1615746361105,
+      "duration" : 782
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1615747520248,
+      "stop" : 1615747520440,
+      "duration" : 192
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "eshop.yanimda"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.RunCucumberTests"
+  }, {
+    "name" : "host",
+    "value" : "Ecems-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "6556@Ecems-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"1 Verify that the product goes to the order information page properly\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Address\""
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "216c30418a76f842.json",
+  "parameterValues" : [ "\"1 Verify that the product goes to the order information page properly\"", "\"Address\"" ]
+}

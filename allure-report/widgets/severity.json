@@ -1,0 +1,91 @@
+[ {
+  "uid" : "49384f96171f9e19",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615747130569,
+    "stop" : 1615747228086,
+    "duration" : 97517
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "68dacac7771c7db",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615746741631,
+    "stop" : 1615746852514,
+    "duration" : 110883
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "abf427766f4586b6",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615747364709,
+    "stop" : 1615747519545,
+    "duration" : 154836
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ce54fd2a378169b8",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615746625546,
+    "stop" : 1615746721166,
+    "duration" : 95620
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c4354ba0bc665c",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615746990107,
+    "stop" : 1615747110251,
+    "duration" : 120144
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6cf89e409bfe682b",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615747249440,
+    "stop" : 1615747299594,
+    "duration" : 50154
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8255cb2e371b45a",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615747319637,
+    "stop" : 1615747345086,
+    "duration" : 25449
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d312dbfde882c3a1",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615746874885,
+    "stop" : 1615746969905,
+    "duration" : 95020
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "61eb2541517b7fe6",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1615746498329,
+    "stop" : 1615746604878,
+    "duration" : 106549
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,178 @@
+{
+  "c79855e961d643450ee22354feec16e4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "49384f96171f9e19",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615747130569,
+        "stop" : 1615747228086,
+        "duration" : 97517
+      }
+    } ]
+  },
+  "caf2cd5aa743b8899a65fc1d34dabe4a" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8255cb2e371b45a",
+      "status" : "failed",
+      "statusDetails" : "Error in selectors.properties or Gherkin file ;title.newAccount could not be found in selectors.properties!",
+      "time" : {
+        "start" : 1615747319637,
+        "stop" : 1615747345086,
+        "duration" : 25449
+      }
+    } ]
+  },
+  "df1841f5c7a468b313e1cb78f67aa90f" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "abf427766f4586b6",
+      "status" : "failed",
+      "statusDetails" : "Expected condition failed: waiting for visibility of element located by By.xpath: (//*[@resource-id=\"com.vodafone.selfservis.beta:id/rowiconIV\"])[2] (tried for 30 second(s) with 500 milliseconds interval)",
+      "time" : {
+        "start" : 1615747364709,
+        "stop" : 1615747519545,
+        "duration" : 154836
+      }
+    } ]
+  },
+  "bd7ef2e55dc7a8b34b128e547e91ce73" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6cf89e409bfe682b",
+      "status" : "failed",
+      "statusDetails" : "Error in selectors.properties or Gherkin file ;title.newAccount could not be found in selectors.properties!",
+      "time" : {
+        "start" : 1615747249440,
+        "stop" : 1615747299594,
+        "duration" : 50154
+      }
+    } ]
+  },
+  "dc0e9bdeb21e2e662efbc6a6cf80836a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ce54fd2a378169b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615746625546,
+        "stop" : 1615746721166,
+        "duration" : 95620
+      }
+    } ]
+  },
+  "d69b5dc6b11945c9f39e2e0b6ca4c005" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "61eb2541517b7fe6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615746498329,
+        "stop" : 1615746604878,
+        "duration" : 106549
+      }
+    } ]
+  },
+  "4ca64023dd9765de0cbf5b1256eed7e1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d312dbfde882c3a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615746874885,
+        "stop" : 1615746969905,
+        "duration" : 95020
+      }
+    } ]
+  },
+  "a71233ae3ba091f715af23ef98da13bf" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "68dacac7771c7db",
+      "status" : "failed",
+      "statusDetails" : "Error in selectors.properties or Gherkin file ;BasketPage could not be found in selectors.properties!",
+      "time" : {
+        "start" : 1615746741631,
+        "stop" : 1615746852514,
+        "duration" : 110883
+      }
+    } ]
+  },
+  "c92220cca28440d21eaca23e8a24473f" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7c4354ba0bc665c",
+      "status" : "failed",
+      "statusDetails" : "Error in selectors.properties or Gherkin file ;BasketPage could not be found in selectors.properties!",
+      "time" : {
+        "start" : 1615746990107,
+        "stop" : 1615747110251,
+        "duration" : 120144
+      }
+    } ]
+  }
+}

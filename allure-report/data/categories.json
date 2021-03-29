@@ -1,0 +1,86 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Error in selectors.properties or Gherkin file ;BasketPage could not be found in selectors.properties!",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "68dacac7771c7db",
+        "parentUid" : "9040bf46520dfced53da87b78e09967b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615746741631,
+          "stop" : 1615746852514,
+          "duration" : 110883
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"1 Verify the product has been added to the basket\"", "\"Basket\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "7c4354ba0bc665c",
+        "parentUid" : "9040bf46520dfced53da87b78e09967b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615746990107,
+          "stop" : 1615747110251,
+          "duration" : 120144
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"3 Verify the advance payment product has been added to the basket\"", "\"Basket\"" ]
+      } ],
+      "uid" : "9040bf46520dfced53da87b78e09967b"
+    }, {
+      "name" : "Error in selectors.properties or Gherkin file ;title.newAccount could not be found in selectors.properties!",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "6cf89e409bfe682b",
+        "parentUid" : "fee752a79abab91800deca41c7437302",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615747249440,
+          "stop" : 1615747299594,
+          "duration" : 50154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"1 Verify that the user can log in with the correct information\"", "\"Login & Logout\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "8255cb2e371b45a",
+        "parentUid" : "fee752a79abab91800deca41c7437302",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615747319637,
+          "stop" : 1615747345086,
+          "duration" : 25449
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"2 Verify that the user receives an error warning when logging in with incorrect information\"", "\"Login & Logout\"" ]
+      } ],
+      "uid" : "fee752a79abab91800deca41c7437302"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of element located by By.xpath: (//*[@resource-id=\"com.vodafone.selfservis.beta:id/rowiconIV\"])[2] (tried for 30 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "abf427766f4586b6",
+        "parentUid" : "2dc7b4c9a482aeafd70dcb1f28987e7a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615747364709,
+          "stop" : 1615747519545,
+          "duration" : 154836
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"1 Verify the product has been bought properly\"", "\"Payment\"" ]
+      } ],
+      "uid" : "2dc7b4c9a482aeafd70dcb1f28987e7a"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
